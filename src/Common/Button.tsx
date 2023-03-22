@@ -4,7 +4,6 @@ import { Text, TouchableOpacity, Alert } from 'react-native';
 const Button = () => {
   const onPress = () => {
     Alert.alert('Test!');
-    
   };
 
   return (
