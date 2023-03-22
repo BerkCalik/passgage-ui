@@ -3013,6 +3013,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/pubsub-js@npm:^1.8.3":
+  version: 1.8.3
+  resolution: "@types/pubsub-js@npm:1.8.3"
+  checksum: 10161a266ad6e35f059e0d8aca2612530ea1c747812b813ecc7934cd0aec5f7ca1d6f8fdea91d79ffaea698cde2e873f0c8a402210bc32861a16e88661d1c797
+  languageName: node
+  linkType: hard
+
 "@types/react-native@npm:0.70.0":
   version: 0.70.0
   resolution: "@types/react-native@npm:0.70.0"
@@ -10591,6 +10598,7 @@ __metadata:
     "@react-native-community/eslint-config": ^3.0.2
     "@release-it/conventional-changelog": ^5.0.0
     "@types/jest": ^28.1.2
+    "@types/pubsub-js": ^1.8.3
     "@types/react": ~17.0.21
     "@types/react-native": 0.70.0
     commitlint: ^17.0.2
