@@ -1,23 +1,29 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { BaseThemeType, withTheme } from '../Theme';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import useThemedStyles from '../Theme/useThemedStyles';
+import { ThemeType } from '../Theme/ThemeProvider';
 
-export interface ButtonProps extends BaseThemeType {
+export interface ButtonProps {
   text: string;
   onPress: () => void;
 }
 
 const Button = (props: ButtonProps): JSX.Element => {
-  console.log('Button theme: ', props.theme);
+  const style = useThemedStyles(styles);
 
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={{ padding: 15, backgroundColor: props.theme.primaryColor }}
-    >
+    <TouchableOpacity onPress={props.onPress} style={[style.button]}>
       <Text>{props.text || 'Button'}</Text>
     </TouchableOpacity>
   );
 };
 
-export default withTheme(Button);
+export default Button;
+
+const styles = (theme: ThemeType) =>
+  StyleSheet.create({
+    button: {
+      backgroundColor: theme.primaryColor,
+      padding: 15,
+    },
+  });
