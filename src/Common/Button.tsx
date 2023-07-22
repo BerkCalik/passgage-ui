@@ -1,14 +1,15 @@
 import React from 'react';
-import { Text, TouchableOpacity, Alert } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
-const Button = () => {
-  const onPress = () => {
-    Alert.alert('Test!');
-  };
+export type ButtonProps = {
+  text: string;
+  onPress: () => void;
+};
 
+const Button = (props: ButtonProps) => {
   return (
-    <TouchableOpacity onPress={() => onPress()}>
-      <Text>Button</Text>
+    <TouchableOpacity onPress={props.onPress}>
+      <Text>{props.text || 'Button'}</Text>
     </TouchableOpacity>
   );
 };
