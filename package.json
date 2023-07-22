@@ -152,5 +152,8 @@
   },
   "directories": {
     "example": "example"
+  },
+  "dependencies": {
+    "@callstack/react-theme-provider": "^3.0.8"
   }
 }
